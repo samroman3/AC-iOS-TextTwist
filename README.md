@@ -42,7 +42,7 @@ Plz don't sue, ~Hasbrah~ Parker Brahs.
 
 For this assignment, you will be making your own ~Boggle~ Text Twist clone using the magic of ```UITextFieldDelegate```.
 
-![](https://media.giphy.com/media/l1J9C4nCMfhCWkxTG/giphy.gif)
+![](https://media.giphy.com/media/3ov9k7BAg80iXQkBji/giphy.gif)
 
 #### Requirements:
 
