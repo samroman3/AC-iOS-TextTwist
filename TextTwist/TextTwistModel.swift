@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class TextTwistModel {
     func guess(_ word: String) -> Bool {
         return currentInfo.words.contains(word)
