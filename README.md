@@ -36,7 +36,7 @@
  '----------------'  '----------------'  '----------------' 
 ```
 
-Plz don't sue, Hasbro.
+Plz don't sue, ~Has***bro***~ Parker Bros.
 
 ### Exercise
 
@@ -48,6 +48,6 @@ For this assignment, you will be making your own ~Boggle~ Text Twist clone using
 
 1. **Letter Bank:** You'll need a letter bank for the user to select from. The letters should disappear or be greyed out when the user types it.
 2. **Letter Checks:** You must allow the user to type out **only** valid letters. Perform checks in your logic to prevent incorrect letters from showing up in your ```TextField```.
-3. Store valid words in word bank(s) once the user returns.
-4. Keyboard should resign when the user hits the ```Return``` key.
+3. **String Storage:** Store valid words in word bank(s) once the user returns.
+4. **Keyboard UI:** Keyboard should resign when the user hits the ```Return``` key.
 
