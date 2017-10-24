@@ -35,5 +35,15 @@
 | '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------' 
 ```
+### Exercise
 
+For this assignment, you will be making your own ~Boggle~ Text Twist clone using the magic of ```UITextFieldDelegate```.
 ![](https://media.giphy.com/media/l1J9C4nCMfhCWkxTG/giphy.gif)
+
+#### Requirements:
+
+1. You'll need a letter bank for the user to select from.
+2. You must allow the user to type out only valid letters. Perform checks in your logic to prevent incorrect letters from showing up in your ```TextField```.
+3. Store correct entries in word bank(s).
+4. Keyboard should resign when the user hits the Return key.
+
