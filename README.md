@@ -36,7 +36,7 @@
  '----------------'  '----------------'  '----------------' 
 ```
 
-Plz don't sue, ~Has***bro***~ Parker Bros.
+Plz don't sue, ~Hasbrah~ Parker Brahs.
 
 ### Exercise
 
