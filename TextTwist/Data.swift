@@ -27,7 +27,10 @@ class WordData {
                       letters: "hisswy",
                       words: ["swishy", "hissy","swish", "hiss","whys","wish","wiss","ywis", "his","shy","sis","why","wis"])
     ]
+    
+    
 }
+
     /*
     static let allInfo2: [TestTwistInfo] = [
                     TestTwistInfo(wordCount: 27,
