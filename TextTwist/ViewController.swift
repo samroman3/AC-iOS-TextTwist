@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var words = WordData()
     var logic = Logic()
     var letters: String = ""
-    
+    var added = true
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var currentLetters: UILabel!
@@ -37,15 +37,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func afterReturn(_ sender: UITextField) {
-        if logic.guess(guessedWord: sender.text!) == true {
+        if logic.guess(guessedWord: sender.text!) {
             resultLabel.text = "Correct!"
             addToBank(sender: sender.text!)
-        } else {
-            resultLabel.text = "Incorrect!"
-        }
-    }
+             } else {
+                if logic.guess(guessedWord: sender.text!) == false {
+                resultLabel.text = "Incorrect!"
+                }
+//                else{
+//                    if textViews[0]!.text.contains(sender.text!) || textViews[1]!.text.contains(sender.text!) || textViews[2]!.text.contains(sender.text!) || textViews[3]!.text.contains(sender.text!) {
+//
+//               resultLabel.text = "You already said that!"
+                        }
+                    }
     
     
+
     
     
     
@@ -54,25 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textView5: UITextView!
     @IBOutlet weak var textView6: UITextView!
     
-    
-//    func wrongLetter(sender: UITextField) {
-//            for n in sender.text! {
-//            if letters.contains(n) {
-//                resultLabel.text = " "
-//
-//            } else {
-//                resultLabel.text = "You cant use that letter!"
-//
-//            }
-//        }
-//        }
-    
-//        if sender.text!.contains(letters) == true {
-//            return true
-//    } else {
-//        return false
-//    }
-// }
+
 
     func addToBank(sender: String){
         if sender.count == 3 && textView3.text.contains(sender) == false
@@ -87,16 +76,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textView6.text.append(sender + " ")
         }
     }
-
     
+//    func checkIfAdded(sender: UITextField) {
+//     let textViews = [textView3,textView4,textView5,textView6]
+//     for i in textViews {
+//        if i!.text == sender.text! {
+//     added = true
+//     } else {
+//     added = false
+//        }
+//
+//    }
+//} // unused function
+
     override func viewDidLoad() {
         currentLetters.text = logic.displayLetters()
         letters = currentLetters.text!
         resultLabel.text = "Let's Play!"
     super.viewDidLoad()
-    
-        // Do any additional setup after loading the view.
     }
     
 }
+
 
