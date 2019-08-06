@@ -23,7 +23,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func wrongLetterEffect(_ sender: UITextField) {
-        wrongLetter(sender: sender)
+        for n in sender.text! {
+            if letters.contains(n) {
+                resultLabel.text = " "
+                
+            } else {
+                resultLabel.text = "You cant use \(sender.text!)!"
+                
+            }
+        }
     }
     
     
@@ -31,32 +39,60 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func afterReturn(_ sender: UITextField) {
         if logic.guess(guessedWord: sender.text!) == true {
             resultLabel.text = "Correct!"
+            addToBank(sender: sender.text!)
         } else {
             resultLabel.text = "Incorrect!"
         }
     }
     
     
-    @IBOutlet var Guesses: [UITextView]!
     
-    func wrongLetter(sender: UITextField) {
-        
-        if sender.text!.contains(letters) {
-        } else {
-            resultLabel.text = "You can't type that!"
-        }
-        
-    }
-//    func addToBank(sender: String){
-//        if sender.count == 3 {
-//        Guesses += sender
+    
+    
+    @IBOutlet weak var textView3: UITextView!
+    @IBOutlet weak var textView4: UITextView!
+    @IBOutlet weak var textView5: UITextView!
+    @IBOutlet weak var textView6: UITextView!
+    
+    
+//    func wrongLetter(sender: UITextField) {
+//            for n in sender.text! {
+//            if letters.contains(n) {
+//                resultLabel.text = " "
+//
+//            } else {
+//                resultLabel.text = "You cant use that letter!"
+//
+//            }
 //        }
+//        }
+    
+//        if sender.text!.contains(letters) == true {
+//            return true
+//    } else {
+//        return false
 //    }
+// }
+
+    func addToBank(sender: String){
+        if sender.count == 3 && textView3.text.contains(sender) == false
+        {
+        textView3.text.append(sender + " ")
+        }
+        else if sender.count == 4 && textView4.text.contains(sender) == false {
+            textView4.text.append(sender + " ")
+        } else if sender.count == 5 && textView5.text.contains(sender) == false {
+            textView5.text.append(sender + " ")
+        } else if sender.count == 6 && textView6.text.contains(sender) == false {
+            textView6.text.append(sender + " ")
+        }
+    }
 
     
     override func viewDidLoad() {
         currentLetters.text = logic.displayLetters()
         letters = currentLetters.text!
+        resultLabel.text = "Let's Play!"
     super.viewDidLoad()
     
         // Do any additional setup after loading the view.

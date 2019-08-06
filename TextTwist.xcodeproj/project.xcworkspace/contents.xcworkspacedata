@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TextTwist.xcodeproj">
+      location = "self:/Users/samroman/Desktop/Unit 2/AC-iOS-TextTwist/TextTwist.xcodeproj">
    </FileRef>
 </Workspace>
